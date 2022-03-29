@@ -6,7 +6,7 @@ const selectOption = document.querySelector('.js_select');
 const inputMoney = document.querySelector('.js_input');
 const btn = document.querySelector('.js_btn');
 const moneyLeft = document.querySelector('.js_left');
-const msg = document.querySelector('.js_span');
+const msg = document.querySelector('.js_msg');
 
 // Declarar funciones y eventos
 
@@ -18,21 +18,21 @@ function getRandomNumber(max) {
 function handleClickBtn (event) {
     event.preventDefault();
 //Obetener el número de la usuaria
-const userNumber = selectOption.value;
-
+const userNumber = parseInt(selectOption.value);
+console.log(userNumber);
 
 //Obtener el número del ordenador
 const computerNumber = getRandomNumber(6);
-
+console.log(computerNumber);
 
 //Insertar el condicional dependiendo de si es el mismo número, o no
     if( userNumber === computerNumber ) {
-        // Si es el mismo número que imprima has ganado
-        msg.innerHTML('Has ganado el doble de lo apostado :)');
+        // Si es el mismo número, que imprima has ganado
+        msg.innerHTML = 'Has ganado el doble de lo apostado :)';
     }
     else {
-        // Si no es el mismo número que imprima Has perdido
-       msg.innerHTML('Has perdido lo apostado :(');
+        // Si no es el mismo número, que imprima Has perdido
+       msg.innerHTML = 'Has perdido lo apostado :(';
     }
 }
 
