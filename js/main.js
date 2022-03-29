@@ -5,8 +5,8 @@
 const selectOption = document.querySelector('.js_select');
 const inputMoney = document.querySelector('.js_input');
 const btn = document.querySelector('.js_btn');
-const moneyLeft = document.querySelector('.js_left');
 const msg = document.querySelector('.js_msg');
+const moneyLeft = document.querySelector('.js_left');
 
 // Declarar funciones y eventos
 
@@ -40,3 +40,15 @@ console.log(computerNumber);
 //Código que se ejecuta con evento del botón
 
 btn.addEventListener('click', handleClickBtn);
+
+
+
+
+// BONUS
+//Mostrar el saldo que le queda después de cada apuesta
+
+function balance () {
+    moneyLeft <= parseInt(inputMoney.value);
+    //Actualizar el saldo, si gana o pierde
+
+}

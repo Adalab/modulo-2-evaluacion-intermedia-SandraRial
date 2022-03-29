@@ -11,3 +11,13 @@
   justify-content: space-around;
   padding: 20px;
 }
+
+.button {
+  background-color: aqua;
+}
+
+.money {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
