@@ -1,43 +1,28 @@
 'use strict';
 
-//Elementos que necesitamos del HTML
 
 const selectOption = document.querySelector('.js_select');
 const inputMoney = document.querySelector('.js_input');
 const btn = document.querySelector('.js_btn');
-const msg = document.querySelector('.js_msg');
-const moneyLeft = document.querySelector('.js_left');
+const messageElement = document.querySelector('.js_msg');
+const moneyLeftContainer = document.querySelector('.js_left');
 
-// Declarar funciones y eventos
 
 function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
-
 function handleClickBtn (event) {
     event.preventDefault();
-//Obetener el número de la usuaria
-const userNumber = parseInt(selectOption.value);
-console.log(userNumber);
-
-//Obtener el número del ordenador
-const computerNumber = getRandomNumber(6);
-console.log(computerNumber);
-
-//Insertar el condicional dependiendo de si es el mismo número, o no
+    const userNumber = parseInt(selectOption.value);
+    const computerNumber = getRandomNumber(6);
     if( userNumber === computerNumber ) {
-        // Si es el mismo número, que imprima has ganado
-        msg.innerHTML = 'Has ganado el doble de lo apostado :)';
+        messageElement.innerHTML = 'Has ganado el doble de lo apostado :)';
     }
     else {
-        // Si no es el mismo número, que imprima Has perdido
-       msg.innerHTML = 'Has perdido lo apostado :(';
+       messageElement.innerHTML = 'Has perdido lo apostado :(';
     }
 }
-
-
-//Código que se ejecuta con evento del botón
 
 btn.addEventListener('click', handleClickBtn);
 
@@ -45,7 +30,6 @@ btn.addEventListener('click', handleClickBtn);
 
 
 // BONUS
-//Mostrar el saldo que le queda después de cada apuesta
 
 function balance () {
     moneyLeft <= parseInt(inputMoney.value);
