@@ -12,21 +12,26 @@ function getRandomNumber(max) {
   return Math.ceil(Math.random() * max);
 }
 
+function writeMessage(mensaje) {
+    messageElement.innerHTML = '';
+}
+
 function handleClickBtn (event) {
     event.preventDefault();
     const userNumber = parseInt(selectOption.value);
     const computerNumber = getRandomNumber(6);
     if( userNumber === computerNumber ) {
-        messageElement.innerHTML = 'Has ganado el doble de lo apostado :)';
+        writeMessage = 'Has ganado el doble de lo apostado :)';
     }
     else {
-       messageElement.innerHTML = 'Has perdido lo apostado :(';
+       writeMessage ='Has perdido lo apostado :(';
     }
+console.log(writeMessage);
 }
 
 btn.addEventListener('click', handleClickBtn);
 
-
+// writeMessage()
 
 
 // BONUS
